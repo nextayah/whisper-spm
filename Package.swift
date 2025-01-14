@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "whisper",
+    name: "whisper-spm",
     platforms: [
         .macOS(.v12),
         .iOS(.v14),
@@ -17,20 +17,6 @@ let package = Package(
         .target(
             name: "whisper",
             path: ".",
-            exclude: [
-               "bindings",
-               "cmake",
-               "coreml",
-               "examples",
-               "extra",
-               "models",
-               "samples",
-               "tests",
-               "CMakeLists.txt",
-               "ggml-cuda.cu",
-               "ggml-cuda.h",
-               "Makefile"
-            ],
             sources: [
                 "ggml.c",
                 "whisper.cpp",
