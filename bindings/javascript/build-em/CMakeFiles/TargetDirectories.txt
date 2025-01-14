@@ -1,0 +1,3 @@
+/Users/numan/Desktop/tarteel-whisper-to-ggml/whisper.cpp/bindings/javascript/build-em/CMakeFiles/libwhisper.dir
+/Users/numan/Desktop/tarteel-whisper-to-ggml/whisper.cpp/bindings/javascript/build-em/CMakeFiles/edit_cache.dir
+/Users/numan/Desktop/tarteel-whisper-to-ggml/whisper.cpp/bindings/javascript/build-em/CMakeFiles/rebuild_cache.dir
