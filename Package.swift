@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "whisper-spm",
+    name: "whisper",
     platforms: [
         .macOS(.v12),
         .iOS(.v14),
