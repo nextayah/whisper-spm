@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-f51bad603e4ca9f2af7df7b8959b92b2 bindings/CMakeFiles/publish-npm
-dfdff962b184b51eb5763d2a07d6f075 bindings/javascript/publish.log
