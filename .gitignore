@@ -1,0 +1,57 @@
+# Build artifacts
+.build/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+main
+server
+
+# Xcode build artifacts
+DerivedData/
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+*.xcuserstate
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+Makefile
+
+# Generated files
+*.metal.air
+*.metal.dia
+*.metal.dat
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*" 2"*
+*" 2".*
+
+# Broken symlinks (these were created during the update process)
+spm-headers/ggml\ 2.h
+spm-headers/whisper\ 2.h

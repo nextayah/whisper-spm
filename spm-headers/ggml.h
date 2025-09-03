@@ -1,1 +1,3 @@
-../ggml.h
+#pragma once
+
+#include "../ggml/include/ggml.h"

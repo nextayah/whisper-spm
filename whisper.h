@@ -1,11 +1,10 @@
 #ifndef WHISPER_H
 #define WHISPER_H
 
-#include "ggml.h"
-
 #include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "include/whisper.h"
 
 #ifdef __GNUC__
 #    define WHISPER_DEPRECATED(func, hint) func __attribute__((deprecated(hint)))
