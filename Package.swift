@@ -25,7 +25,7 @@ let package = Package(
                 "ggml/src/ggml-quants.c",
                 "ggml/src/ggml-metal/ggml-metal.m"
             ],
-            resources: [.process("ggml/src/ggml-metal/ggml-metal.metal")],
+            resources: [.process("ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
             cSettings: [
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
