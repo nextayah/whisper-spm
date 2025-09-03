@@ -18,12 +18,12 @@ let package = Package(
             name: "whisper",
             path: ".",
             sources: [
-                "ggml.c",
+                "ggml/src/ggml.c",
                 "whisper.cpp",
-                "ggml-alloc.c",
-                "ggml-backend.c",
-                "ggml-quants.c",
-                "ggml-metal.m"
+                "ggml/src/ggml-alloc.c",
+                "ggml/src/ggml-backend.cpp",
+                "ggml/src/ggml-quants.c",
+                "ggml/src/ggml-metal/ggml-metal.m"
             ],
             resources: [.process("ggml/src/ggml-metal/ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
@@ -31,7 +31,9 @@ let package = Package(
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
                 .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
-                .define("GGML_USE_METAL")
+                .define("GGML_USE_METAL"),
+                .headerSearchPath("ggml/src"),
+                .headerSearchPath("ggml/include")
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
                 // We should consider add this in the future when we drop support for iOS 14
                 // (ref: ref: https://developer.apple.com/documentation/accelerate/1513264-cblas_sgemm?language=objc)
