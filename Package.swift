@@ -23,7 +23,7 @@ let package = Package(
                 "ggml/src/ggml-alloc.c",
                 "ggml/src/ggml-backend.cpp",
                 "ggml/src/ggml-quants.c",
-                // "ggml/src/ggml-metal/ggml-metal.m", // Temporarily disabled for iOS build test
+                "ggml/src/ggml-metal/ggml-metal.m", // Temporarily disabled for iOS build test
                 "src/whisper.cpp"
             ],
             // resources: [.process("ggml/src/ggml-metal/ggml-metal.metal")], // Temporarily disabled for iOS build test
@@ -32,7 +32,7 @@ let package = Package(
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
                 .define("GGML_USE_ACCELERATE"),
                 .unsafeFlags(["-fno-objc-arc"]),
-                // .define("GGML_USE_METAL"), // Temporarily disabled for iOS build test
+                .define("GGML_USE_METAL"), // Temporarily disabled for iOS build test
                 .headerSearchPath("ggml/include"),
                 .headerSearchPath("include"),
                 .headerSearchPath("ggml/src"),
@@ -42,8 +42,8 @@ let package = Package(
                 // NOTE: NEW_LAPACK will required iOS version 16.4+
                 // We should consider add this in the future when we drop support for iOS 14
                 // (ref: ref: https://developer.apple.com/documentation/accelerate/1513264-cblas_sgemm?language=objc)
-                // .define("ACCELERATE_NEW_LAPACK"),
-                // .define("ACCELERATE_LAPACK_ILP64")
+                .define("ACCELERATE_NEW_LAPACK"),
+                .define("ACCELERATE_LAPACK_ILP64")
             ],
             linkerSettings: [
                 .linkedFramework("Accelerate")
