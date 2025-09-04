@@ -3,7 +3,7 @@
 #if defined(GGML_METAL_EMBED_LIBRARY)
 __embed_ggml-common.h__
 #else
-#include "ggml-common.h"
+#include "../ggml-common.h"
 #endif
 #include "ggml-metal-impl.h"
 

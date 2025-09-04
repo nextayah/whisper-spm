@@ -26,7 +26,7 @@ let package = Package(
                 "ggml/src/ggml-metal/ggml-metal.m", // Temporarily disabled for iOS build test
                 "src/whisper.cpp"
             ],
-            // resources: [.process("ggml/src/ggml-metal/ggml-metal.metal")], // Temporarily disabled for iOS build test
+            resources: [.process("ggml/src/ggml-metal/ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
             cSettings: [
                 .unsafeFlags(["-Wno-shorten-64-to-32", "-O3", "-DNDEBUG"]),
@@ -44,7 +44,9 @@ let package = Package(
                 // .define("ACCELERATE_LAPACK_ILP64")
             ],
             linkerSettings: [
-                .linkedFramework("Accelerate")
+                .linkedFramework("Accelerate"),
+                .linkedFramework("Metal"),
+                .linkedFramework("MetalKit")
             ]
         )
     ],
